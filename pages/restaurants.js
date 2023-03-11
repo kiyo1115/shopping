@@ -35,7 +35,7 @@ const GET_RESTAURANT_DISHES = gql`
 `;
 
 const restaurants = (props) => {
-  const API_URL = "http://localhost:1337" || process.env.NEXT_PUBLIC_API_URL
+  const API_URL = process.env.NEXT_PUBLIC_API_URL|| "http://localhost:1337"
 
   const appContext = useContext(AppContext);
   const mediaSize = useMedia({ minWidth: "600px" });
