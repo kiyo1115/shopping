@@ -35,6 +35,8 @@ const GET_RESTAURANT_DISHES = gql`
 `;
 
 const restaurants = (props) => {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337/"; // デプロイしたときにも正常にAPIデータが取得できる
+
   const appContext = useContext(AppContext);
   const mediaSize = useMedia({ minWidth: "600px" });
   const router = useRouter();
@@ -59,7 +61,7 @@ const restaurants = (props) => {
                 <Col xs="6" sm="4" key={dish.id} style={{ padding: 0 }}>
                   <Card style={{ margin: "0 10px" }}>
                     <CardImg
-                      src={`${process.env.NEXT_PUBLIC_API_URL}${dish.image.url}`}
+                      src={`${API_URL}${dish.image.url}`}
                       //process.env.NEXT_PUBLIC_API_URLは設定ファイルから読み込んでいる
                       top={true}
                       style={{ height: "auto", width: "auto" }}

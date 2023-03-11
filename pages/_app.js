@@ -6,7 +6,10 @@ import withData from "../lib/apollo";
 import AppContext from "../context/AppContext";
 import Cookies from "js-cookie";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337/"; // デプロイしたときにも正常にAPIデータが取得できる
+
 class MyApp extends App {
+  
   // -------------------------------------------
   state = {
     user: null,
@@ -52,7 +55,7 @@ class MyApp extends App {
     }
 
     if (token) {
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/me`, {
+      fetch(`${API_URL}/users/me`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -5,7 +5,11 @@ import AppContext from "../../context/AppContext";
 import { useContext, useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337/"
+
+
 const checkOutFrom = () => {
+
   const [data, setData] = useState({
     address: "",
     stripe_id: "",
@@ -32,7 +36,7 @@ const checkOutFrom = () => {
   const submitOrder = async () => {
     const cardElement = elements.getElement(CardElement);
     const token = await stripe.createToken(cardElement);
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders`, {
+    const response = await fetch(`${API_URL}/orders`, {
       method: "POST",
       headers: userToken && {
         Authorization: `Bearer ${userToken}`,
