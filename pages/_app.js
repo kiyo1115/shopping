@@ -6,7 +6,7 @@ import withData from "../lib/apollo";
 import AppContext from "../context/AppContext";
 import Cookies from "js-cookie";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL|| "http://localhost:1337"
+const API_URL = "http://localhost:1337" || process.env.NEXT_PUBLIC_API_URL
 console.log(API_URL)
 class MyApp extends App {
   
