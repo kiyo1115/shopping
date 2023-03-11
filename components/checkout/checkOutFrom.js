@@ -5,7 +5,7 @@ import AppContext from "../../context/AppContext";
 import { useContext, useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 
-const API_URL = "https://shopping-cart7.fly.dev"
+const API_URL = process.env.NEXT_PUBLIC_API_URL
 
 
 const checkOutFrom = () => {
