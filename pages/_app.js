@@ -6,7 +6,7 @@ import withData from "../lib/apollo";
 import AppContext from "../context/AppContext";
 import Cookies from "js-cookie";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL; // デプロイしたときにも正常にAPIデータが取得できる
+const API_URL = process.env.NEXT_PUBLIC_API_URL|| "http://localhost:1337"
 console.log(API_URL)
 class MyApp extends App {
   
