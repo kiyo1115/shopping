@@ -16,7 +16,6 @@ const Login = () => {
   const appContext = useContext(AppContext);
   const [mailCheck, setMailCheck] = useState(null);
 
-  // console.log(appContext)
 
   const [data, setData] = useState({ identifier: "", password: "" });
   const handleLogin = () => {
@@ -26,7 +25,6 @@ const Login = () => {
         })
         .catch((err) => {
           setMailCheck("メールアドレスまたはパスワードが違います");
-          // console.log(err);
         });
   };
   const handleChange = (e) => {

@@ -19,7 +19,6 @@ const QUERY = gql`
 
 const RestaurantList = (props) => {
   const API_URL = process.env.NEXT_PUBLIC_API_URL; // デプロイしたときにも正常にAPIデータが取得できる
-  console.log(API_URL)
   const { loading, error, data } = useQuery(QUERY);
   const mediaSize = useMedia({minWidth:"600px"});
 

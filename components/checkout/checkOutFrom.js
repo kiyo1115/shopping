@@ -50,10 +50,8 @@ const checkOutFrom = () => {
       }),
     });
     if (response.ok) {
-      // console.log("注文に成功しました")
       setSuccess("注文に成功しました");
     } else {
-      // console.log("注文に失敗しました")
       setError("注文に失敗しました");
     }
   };

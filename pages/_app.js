@@ -7,7 +7,7 @@ import AppContext from "../context/AppContext";
 import Cookies from "js-cookie";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL; // デプロイしたときにも正常にAPIデータが取得できる
-
+console.log(API_URL)
 class MyApp extends App {
   
   // -------------------------------------------
@@ -125,7 +125,6 @@ class MyApp extends App {
         () => Cookies.set("cart", this.state.cart.items)
       );
     }
-    // console.log(newItem);
   };
 
   //カートから商品を削除
@@ -184,7 +183,6 @@ class MyApp extends App {
         () => Cookies.set("cart", this.state.cart.items)
       );
     }
-    // console.log(newItem);
   };
 
   render() {
