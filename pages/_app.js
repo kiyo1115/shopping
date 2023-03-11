@@ -7,7 +7,6 @@ import AppContext from "../context/AppContext";
 import Cookies from "js-cookie";
 
 const API_URL = "https://shopping-cart7.fly.dev"; // デプロイしたときにも正常にAPIデータが取得できる
-console.log(`${API_URL}/users/me`)
 
 class MyApp extends App {
   

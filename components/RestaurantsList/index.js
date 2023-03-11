@@ -19,7 +19,7 @@ const QUERY = gql`
 
 const RestaurantList = (props) => {
   const API_URL ="https://shopping-cart7.fly.dev"; // デプロイしたときにも正常にAPIデータが取得できる
-
+  console.log(API_URL)
   const { loading, error, data } = useQuery(QUERY);
   const mediaSize = useMedia({minWidth:"600px"});
 
