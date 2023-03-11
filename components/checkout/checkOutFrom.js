@@ -5,7 +5,7 @@ import AppContext from "../../context/AppContext";
 import { useContext, useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337/"
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337"
 
 
 const checkOutFrom = () => {
