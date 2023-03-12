@@ -37,7 +37,7 @@ const RestaurantList = (props) => {
       // で入力しているデータを入力するたびに（＝＞estaurant.name　と　.includes）
       // props名searchから呼び出し当てはまったものをsearchQueryへ返している
     );
-    // console.log(searchQuery)
+    console.log(searchQuery)
     return (
       <Row>
         {searchQuery.map((res) => {
