@@ -36,6 +36,7 @@ const checkOutFrom = () => {
   const submitOrder = async () => {
     const cardElement = elements.getElement(CardElement);
     const token = await stripe.createToken(cardElement);
+    console.log()
     const response = await fetch(`${API_URL}/orders`, {
       method: "POST",
       headers: userToken && {

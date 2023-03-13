@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Container, Nav, NavItem } from "reactstrap";
 import AppContext from "../context/AppContext";
 import useMedia from "use-media";
-
+ 
 
 const layout = (props) => {
   const { user, userOut } = useContext(AppContext);
